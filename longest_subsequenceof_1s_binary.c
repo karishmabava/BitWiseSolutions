@@ -35,14 +35,6 @@ Output : 5
 #include <stdint.h>
 #include <assert.h>
 
-struct node {
-
-	int count;
-	int start_index;
-	int last_index;
-	int bit_index;
-};
-
 /* Function to convert a decinal number to binary number */
 long decimalToBinary(long n) {
     int remainder;
@@ -57,10 +49,7 @@ long decimalToBinary(long n) {
     return binary;
 }
 
-struct node * longest_sequence_1s(char *buff, int str_len){
-
-	struct node *result = (struct node *)malloc(sizeof(struct node));
-	memset(result, 0, sizeof(struct node));
+void longest_sequence_1s(char *buff, int str_len){
 
 	int len = str_len;
 	int temp= 0, i=0, count=0, start_index = 0, last_index = 0;
@@ -86,12 +75,7 @@ struct node * longest_sequence_1s(char *buff, int str_len){
 		len--;
 	}
 
-	result->count = count;
-	result->start_index = start_index;
-	result->last_index = last_index-1;  // WE are inclusing last_index two times in while loop
-
 	int left_count=0;
-	 
 	// Couting 1's sequence from left side
 	 for(int j=start_index - 2; j>=0; j--){
 		 if(buff[j] == '1'){
@@ -116,7 +100,7 @@ struct node * longest_sequence_1s(char *buff, int str_len){
 	   printf("Flip the %d bit\n", last_index+1);
 	}
 
-	return result;
+	return;
 
 } 
 
@@ -137,8 +121,7 @@ int main(){
 
 	// Now search for pattern for longest consecutive 1s"
 	int len = strlen(buf);
-    result = longest_sequence_1s(buf, len);	
-//	printf("count:%d start_index:%d last_index:%d\n", result->count, result->start_index, result->last_index);
+    longest_sequence_1s(buf, len);	
 
 	return 1;
 
