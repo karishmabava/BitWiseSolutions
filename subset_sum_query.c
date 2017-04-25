@@ -37,7 +37,11 @@ int main(){
 		scanf("%d", &arr[i]);
 	}
 
-	int sum = 5;
+	// We are using one sum only,
+	// If array is required then simply iterate for every element in sum array
+	int sum;
+	printf("Enter sum: ");
+	scanf("%d", &sum);
 	
 	// Finding the max;
 	int max = 0;
