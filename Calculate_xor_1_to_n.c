@@ -54,6 +54,7 @@ int computeXOR(int n)
     return 0;
 }
 
+
 int main(){
 
 	int x;
