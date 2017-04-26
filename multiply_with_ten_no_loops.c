@@ -35,8 +35,8 @@ int main(){
     printf("Enter the number: ");
     scanf("%d", &n);
 
-	int k = multiply_with_10(n);
-	printf("Ans is %d\n", k);
+    int k = multiply_with_10(n);
+    printf("Ans is %d\n", k);
 
 	return 1;
 }
