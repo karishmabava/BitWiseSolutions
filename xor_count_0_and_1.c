@@ -40,7 +40,7 @@ int main(){
 	int count_ones=0;
 	for(int i=0; i<count; i++){
 		if(n&(1<<i)){
-			count_ones++;
+		   count_ones++;
 		}
 	}
 
