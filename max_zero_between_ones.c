@@ -59,7 +59,7 @@ int main(){
 	if(flag == 1){
 	   count_zero = -1;
 	}else {
-		count_zero = count_zero - 1; // Because we started with 0 index in for loop
+	   count_zero = count_zero - 1; // Because we started with 0 index in for loop
 	}
 
 	printf("Zero count is %d\n", count_zero);
