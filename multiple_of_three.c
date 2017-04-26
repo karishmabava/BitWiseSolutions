@@ -40,7 +40,7 @@ int main(){
 		} else  if (i%2 != 0 && (n&(1<<i))) {
 		   odd_bit++;	
 		} else {
-			continue;
+		   continue;
 		}	
 	}
 
